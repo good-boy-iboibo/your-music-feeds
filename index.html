@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>spotify timeline</title>
+
+        <link rel="icon" href="favicon.svg">
+
+        <!-- react -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js" crossorigin></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+        <!-- nunito -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;710&display=swap" rel="stylesheet">
+
+        <!-- mui -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/material-ui/4.12.3/umd/material-ui.production.min.js"></script> -->
+        <script src="https://unpkg.com/@mui/material@latest/umd/material-ui.production.min.js"></script>
+        <script type="text/babel" src="src/0_include_and_theme.js"></script>
+
+        <!-- particles-js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/7c836adda6.js" crossorigin="anonymous"></script>
+
+        <!-- fuse.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.5.3/fuse.min.js"></script>
+
+
+<!--    <script type="text/babel" src="src/.js"></script>
+        <script type="text/babel" src="src/.js"></script>
+        <script type="text/babel" src="src/.js"></script>-->
+        <script type="text/babel" src="src/3_cards.js"></script>
+        <script type="text/babel" src="src/3_timeline.js"></script>
+        <script type="text/babel" src="src/3_get_filtered.js"></script>
+        <script type="text/babel" src="src/3_datepicker.js"></script>
+        <script type="text/babel" src="src/3_filters.js"></script>
+        <script type="text/babel" src="src/3_main_screen.js"></script>
+        <link rel="stylesheet" href="src/2_spinner.css" />
+        <script type="text/babel" src="src/2_get_data.js"></script>
+        <script type="text/babel" src="src/2_launch.js"></script>
+        <script type="text/babel" src="src/1_auth.js"></script>
+        <script type="text/babel" src="src/1_retry.js"></script>
+        <script type="text/babel" src="src/1_unavailable.js"></script>
+        <script type="text/babel" src="src/1_get_token.js"></script>
+        <script type="text/babel" src="src/1_check_token.js"></script>
+        <script type="text/babel" src="src/0_index.js"></script>
+
+
+        <style>
+            body {
+                margin: 0;
+                overflow-x: clip;
+                /* overflow-y: overlay; */
+            }
+
+            ::-webkit-scrollbar {
+                width: 0.8em;
+            }
+            ::-webkit-scrollbar-thumb {
+                background-color: hsla(52, 100%, 50%, 0.25);
+                border-radius: 7px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background-color: hsla(52, 100%, 50%, 0.55);
+            }
+
+            body::-webkit-scrollbar {
+                background: #27493f;
+            }
+
+            /* for firefox */
+            html {
+                scrollbar-color: hsla(52, 100%, 50%, 0.25) #27493f;
+            }
+            .MuiPopover-paper {
+                scrollbar-color: hsla(52, 100%, 50%, 0.25) #006144;
+            }
+
+            .MuiPaginationItem-root.Mui-selected {
+                font-weight: bold;
+            }
+        </style>
+
+
+    </head>
+    <body style="margin: 0">
+        <div id="root"></div>
+    </body>
+</html>
