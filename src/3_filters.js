@@ -51,11 +51,13 @@ const Filters = ({params, setParams, count}) => {
                     onChange={() => setParams({ ...params, compilations: !params.compilations })}
                 />
                 <DividingBar />
-                <CheckboxStyled
-                    label={['Show "Appears On"',<p>show <b>"Appears On"</b></p>]}
-                    checked={params.appearsOn}
-                    onChange={() => setParams({ ...params, appearsOn: !params.appearsOn })}
-                />
+                <Tooltip title="Show releases that the artist(s) you follow is in but not credited as the main album artist"><div>
+                    <CheckboxStyled
+                        label={['Show "Appears On"',<p>Show <b>"Appears On"</b></p>]}
+                        checked={params.appearsOn}
+                        onChange={() => setParams({ ...params, appearsOn: !params.appearsOn })}
+                    />
+                </div></Tooltip>
                 <DividingBar />
                 <DPLabel style={{ marginTop:"0.3em" }}>until</DPLabel>
                 <DatePicker
