@@ -23,7 +23,8 @@ const retry = (arg) => {
                 <BigButton
                     label="Retry"
                     icon="fas fa-redo-alt"
-                    func={ arg } />
+                    func={arg}
+                />
             </Div>
             <BGParticles />
         </ThemeProvider>,

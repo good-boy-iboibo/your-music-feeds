@@ -57,7 +57,7 @@ const theme = createTheme({
 
     typography: {
         fontSize: 15,
-        fontFamily: '"Nunito", sans-serif',
+        fontFamily: '"Nunito", "Roboto", "Helvetica", "Arial", sans-serif',
         button: {
             textTransform: "none"
         },
