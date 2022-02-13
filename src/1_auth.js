@@ -142,6 +142,8 @@ const BGParticles = () => {
     React.useEffect(showParticles);
 
     const Canvas = styled("canvas")({
+        width: "100vw",
+        height: "100vh",
         position: "absolute",
         top: 0,
         zIndex: -1,
@@ -161,4 +163,5 @@ const SmallTitle = styled(BigTitle)({
     margin: "0.5em",
     borderRadius: radius,
     backgroundColor: pal.bgdark,
+    textAlign: "center",
 });
