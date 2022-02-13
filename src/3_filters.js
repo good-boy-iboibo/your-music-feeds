@@ -148,7 +148,7 @@ const DividingBar = () => {
 
 const MadeBy = () => {
     const Typo = styled(Typography)(({ theme }) => ({
-        padding: (isPC? "2em 0 3.85em 0": "0 0 4em 0"),
+        margin: (isPC? "2em 0 3.85em 0": "0 0 4em 0"),
         textAlign: "right",
         color: pal.lightgray,
         fontWeight: "bold",

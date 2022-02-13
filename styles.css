@@ -24,15 +24,15 @@ body {
 }
 
 body::-webkit-scrollbar {
-    background: #27493f;
+    background: hsl(162, 30%,  21%);
 }
 
 /* for firefox */
 html {
-    scrollbar-color: hsla(52, 100%, 50%, 0.25) #27493f;
+    scrollbar-color: hsla(52, 100%, 50%, 0.25) transparent;
 }
 .MuiPopover-paper {
-    scrollbar-color: hsla(52, 100%, 50%, 0.25) #006144;
+    scrollbar-color: hsla(52, 100%, 50%, 0.25) transparent;
 }
 
 
