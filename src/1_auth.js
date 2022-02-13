@@ -1,9 +1,7 @@
 
-const initMsg = "On this site, you can check all new songs by artists you follow on Spotify. Please sign in with Spotify to allow this site to check who you're following and your country."
+const auth = (err) => {
 
-const auth = (err = initMsg) => {
-
-    console.log("auth() is called");
+    console.log(`auth(${err===undefined?"":`"${err}"`}) is called`);
     const pp = localStorage.getItem("STLPerpage") || 16;
     localStorage.clear();
     localStorage.setItem("STLPerpage", pp);
@@ -26,7 +24,7 @@ const auth = (err = initMsg) => {
                 <SmallTitle>
                     Your Music Feeds <span style={{ fontSize: "50%" }}>BETA</span>
                 </SmallTitle>
-                { err === undefined || <MsgArea msg={err} /> }
+                <MsgArea err={err} />
                 <BigButton
                     label="Login with Spotify"
                     icon="fab fa-spotify"
@@ -109,13 +107,22 @@ const MsgArea = (props) => {
         borderRadius: radius,
         backgroundColor: pal.bgdark,
         fontSize: "19px",
+        fontWeight: "bold",
         whiteSpace: "pre-wrap",
         textAlign: "center",
     }));
 
     return (
         <Msg>
-            <b>{props.msg}</b>
+            On this site, you can check all new songs by artists you follow on Spotify. Please sign in with Spotify to allow this site to check who you're following and your country.<br/>
+            {props.err === undefined ||
+                <p style={{
+                    color: theme.palette.error.main,
+                    marginBottom: 0,
+                }}>
+                    {props.err}
+                </p>
+            }
         </Msg>
     );
 }

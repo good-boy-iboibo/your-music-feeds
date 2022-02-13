@@ -18,7 +18,7 @@ const unavailable = () => {
                 <SmallTitle>
                     Your Music Feeds <span style={{ fontSize: "50%" }}>BETA</span>
                 </SmallTitle>
-                <MsgArea msg=
+                <MsgArea err=
                     {"Your browser isn't supported\n(can't use localStorage)"}
                 />
             </Div>
