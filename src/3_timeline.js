@@ -10,7 +10,7 @@ const Timeline = ({ items }) => {
 
     const Div = styled("div")({
         flexGrow: 1,
-        marginRight: "1em",
+        marginRight: (isPC? "1em": 0),
 
         display: "flex",
         flexDirection: "column",
@@ -31,9 +31,18 @@ const Timeline = ({ items }) => {
                 color="secondary"
                 count={state.totalPage}
                 page={state.curPage}
-                onChange={(e, v) => setState({ ...state, curPage: v })}
+                onChange={(e, v) => {
+                    if (isPC)
+                        scrollTo(0, 0);
+                    else {
+                        document.getElementById("scrollTarget").scrollIntoView(true);
+                        scrollBy(0, -40);
+                    }
+                    setState({ ...state, curPage: v });
+                }}
                 style={{ padding: "1em 0 4em 0" }}
             />
+            { isPC || <MadeBy /> }
         </Div>
     );
 };
@@ -63,7 +72,7 @@ const PageNav = ({ state, setState }) => {
     const perpageArr = [8, 16, 32, 64, 128];
 
     return (
-        <Div>
+        <Div id="scrollTarget">
             <Tooltip title="Items per page">
                 <FormControl
                     variant="outlined"

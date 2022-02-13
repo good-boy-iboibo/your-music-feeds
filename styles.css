@@ -1,0 +1,43 @@
+
+html {
+    background-color: hsl(162, 30%,  21%);
+}
+
+body {
+    margin: 0;
+    overflow-x: clip;
+    /* overflow-y: overlay; */
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 0.8em;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(52, 100%, 50%, 0.25);
+    border-radius: 7px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsla(52, 100%, 50%, 0.55);
+}
+
+body::-webkit-scrollbar {
+    background: #27493f;
+}
+
+/* for firefox */
+html {
+    scrollbar-color: hsla(52, 100%, 50%, 0.25) #27493f;
+}
+.MuiPopover-paper {
+    scrollbar-color: hsla(52, 100%, 50%, 0.25) #006144;
+}
+
+
+
+
+.MuiPaginationItem-root.Mui-selected {
+    font-weight: bold;
+}

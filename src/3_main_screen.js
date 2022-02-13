@@ -48,6 +48,7 @@ const MainArea = () => {
 
     const Div = styled("div")({
         display: "flex",
+        flexDirection: (isPC? "row": "column-reverse"),
     });
 
     return (
@@ -61,16 +62,8 @@ const MainArea = () => {
 
 const AppTitle = () => {
 
-    const tweetURL = "https://good-boy-iboibo.github.io/spotify-timeline/"
-    const tweetText = "Spotify Timeline"
-
-    const Title = styled(Typography)(({ theme }) => ({
-        color: pal.yellow,
-        fontSize: "2.4em",
-        fontWeight: "bold",
-        userSelect: "none",
-        textShadow: "hsla(0, 0%, 0%, 0.6) 0.10em 0.07em 0.02em",
-    }));
+    const tweetURL = "https://good-boy-iboibo.github.io/your-music-feeds/"
+    const tweetText = "Your Music Feeds"
 
     const Icon = styled("i")({
         color: pal.gray,
@@ -96,16 +89,16 @@ const AppTitle = () => {
 
     return (
         <Div>
-            <Title>
-                Spotify Timeline <span style={{ fontSize: "50%" }}>BETA</span>
-            </Title>
+            <BigTitle>
+                Your Music Feeds <span style={{ fontSize: "50%" }}>BETA</span>
+            </BigTitle>
             <div style={{ display: "inline-block" }}>
                 <Tooltip title="Share this app on Twitter" placement="bottom">
                     <a
                         href={`https://twitter.com/share?url=${tweetURL}&text=${tweetText}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                    >
+                        >
                         <Twitter className="fab fa-twitter-square" />
                     </a>
                 </Tooltip>
@@ -116,3 +109,12 @@ const AppTitle = () => {
         </Div>
     )
 }
+
+
+const BigTitle = styled(Typography)(({ theme }) => ({
+    color: pal.yellow,
+    fontSize: "2.4em",
+    fontWeight: "bold",
+    userSelect: "none",
+    textShadow: "hsla(0, 0%, 0%, 0.6) 0.10em 0.07em 0.02em",
+}));

@@ -2,7 +2,8 @@
 const Filters = ({params, setParams, count}) => {
 
     const Div = styled("div")({
-        alignSelf: "flex-start",
+        alignSelf: (isPC ? "flex-start" : "stretch"),
+        marginBottom: (isPC? 0: "4em"),
 
         padding: "0.9em",
         display: "flex",
@@ -78,7 +79,7 @@ const Filters = ({params, setParams, count}) => {
                     {count.filtered} / {count.total} items
                 </Typography>
             </Div>
-            <MadeBy/>
+            { isPC && <MadeBy /> }
         </div>
     );
 };
@@ -147,7 +148,7 @@ const DividingBar = () => {
 
 const MadeBy = () => {
     const Typo = styled(Typography)(({ theme }) => ({
-        padding: "2em 0 3.9em 0",
+        padding: (isPC? "2em 0 3.85em 0": "0 0 4em 0"),
         textAlign: "right",
         color: pal.lightgray,
         fontWeight: "bold",

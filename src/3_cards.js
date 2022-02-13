@@ -73,6 +73,7 @@ const CardItem = ({ item }) => {
         margin: marginsInCard,
         borderRadius: "0.15em",
         boxShadow: `rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px`,
+        userSelect: "none",
     });
 
 
@@ -152,7 +153,8 @@ const CardItem = ({ item }) => {
                             href={`spotify:album:${item.id}`}
                             onClick={e => e.stopPropagation()}
                             >
-                            <LinkIcon className="fab fa-spotify" />
+                            {/* <LinkIcon className="fab fa-spotify" /> */}
+                            <LinkIcon className="fas fa-play-circle" />
                         </a>
                     </IconWrapper>
                 </Tooltip>

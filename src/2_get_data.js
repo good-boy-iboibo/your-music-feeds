@@ -70,19 +70,19 @@ const get_data = async () => {
     console.log("get_data() is called");
     await get_followings();
 
-    { // faster
-        const que = [];
-        followings_map.forEach((value, key) => {
-            que.push(get_artist_albums(key));
-        })
-        await Promise.all(que);
-    }
-
-    // { // slower but safe
-    //     for (let id of followings_map.keys()) {
-    //         await get_artist_albums(id);
-    //     }
+    // { // faster
+    //     const que = [];
+    //     followings_map.forEach((value, key) => {
+    //         que.push(get_artist_albums(key));
+    //     })
+    //     await Promise.all(que);
     // }
+
+    { // slower but safe
+        for (let id of followings_map.keys()) {
+            await get_artist_albums(id);
+        }
+    }
 
     console.log("get_data() is done");
     return;
@@ -179,7 +179,7 @@ const request_data = async (url) => { // return value is Promise<Response>
 
     const header = {
         "Authorization": `Bearer ${localStorage.getItem("STLToken")}`,
-        "Accept-Language": "en"
+        "Accept-Language": "en-US"
     };
     while (true) {
         const res = await fetch(url, { headers: header })

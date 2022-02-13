@@ -1,5 +1,6 @@
 
-const redirect = "https://good-boy-iboibo.github.io/spotify-timeline/";
+//const redirect = "https://good-boy-iboibo.github.io/your-music-feeds/";
+const redirect = "http://127.0.0.1:5500/"
 const client_id = "12803c2e0ae54cef8b217bfa8e7f9604";
 const client_secret = "0e86c3318f9a498c8d849b5da344986f";
 const scope = "user-follow-read user-read-private";
@@ -11,7 +12,18 @@ const scope = "user-follow-read user-read-private";
     STLRefToken: (refresh token)
 } */
 
-
+let isPC = true;
+(() => {
+    if (screen.width < 870) {
+        isPC = false;
+        document
+            .getElementById("viewport")
+            .setAttribute("content", `width=${Math.max(window.innerWidth, 590)}`);
+    }
+    if (window.innerWidth < 870) {
+        isPC = false;
+    }
+})();
 
 
 Promise.resolve()

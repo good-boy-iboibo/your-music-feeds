@@ -14,7 +14,10 @@ const retry = (arg) => {
     ReactDOM.render(
         <ThemeProvider theme={theme}>
             <Div>
-                <ErrorMsg msg={"Too Many Requests (429)\nPlease wait for a while and retry."} />
+                <SmallTitle>
+                    Your Music Feeds <span style={{ fontSize: "50%" }}>BETA</span>
+                </SmallTitle>
+                <MsgArea msg={"Too Many Requests (429)\nPlease wait for a while and retry."} />
                 <BigButton
                     label="Retry"
                     icon="fas fa-redo-alt"

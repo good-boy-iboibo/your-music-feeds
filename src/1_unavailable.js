@@ -15,7 +15,10 @@ const unavailable = () => {
     ReactDOM.render(
         <ThemeProvider theme={theme}>
             <Div>
-                <ErrorMsg msg=
+                <SmallTitle>
+                    Your Music Feeds <span style={{ fontSize: "50%" }}>BETA</span>
+                </SmallTitle>
+                <MsgArea msg=
                     {"Your browser isn't supported\n(can't use localStorage)"}
                 />
             </Div>

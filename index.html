@@ -2,7 +2,20 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>spotify timeline</title>
+
+        <title>Your Music Feeds</title>
+        <meta name="title" content="Your Music Feeds">
+        <meta name="description" content="Check all new songs by artists you follow on Spotify.">
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://metatags.io/">
+        <meta property="og:title" content="Your Music Feeds">
+        <meta property="og:description" content="Check all new songs by artists you follow on Spotify.">
+        <meta property="og:image" content="favicon.svg">
+        <meta property="twitter:card" content="summary">
+        <meta name="twitter:site" content="@good_boy_iboibo">
+
+        <meta id="viewport" name="viewport" content="width=device-width">
 
         <link rel="icon" href="favicon.svg">
 
@@ -50,42 +63,7 @@
         <script type="text/babel" src="src/1_check_token.js"></script>
         <script type="text/babel" src="src/0_index.js"></script>
 
-
-        <style>
-            body {
-                margin: 0;
-                overflow-x: clip;
-                /* overflow-y: overlay; */
-            }
-
-            ::-webkit-scrollbar {
-                width: 0.8em;
-            }
-            ::-webkit-scrollbar-thumb {
-                background-color: hsla(52, 100%, 50%, 0.25);
-                border-radius: 7px;
-            }
-            ::-webkit-scrollbar-thumb:hover {
-                background-color: hsla(52, 100%, 50%, 0.55);
-            }
-
-            body::-webkit-scrollbar {
-                background: #27493f;
-            }
-
-            /* for firefox */
-            html {
-                scrollbar-color: hsla(52, 100%, 50%, 0.25) #27493f;
-            }
-            .MuiPopover-paper {
-                scrollbar-color: hsla(52, 100%, 50%, 0.25) #006144;
-            }
-
-            .MuiPaginationItem-root.Mui-selected {
-                font-weight: bold;
-            }
-        </style>
-
+        <link rel="stylesheet" href="styles.css" />
 
     </head>
     <body style="margin: 0">

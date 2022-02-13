@@ -1,5 +1,7 @@
 
-const auth = (err) => {
+const initMsg = "On this site, you can check all new songs by artists you follow on Spotify. Please sign in with Spotify to allow this site to check who you're following and your country."
+
+const auth = (err = initMsg) => {
 
     console.log("auth() is called");
     const pp = localStorage.getItem("STLPerpage") || 16;
@@ -21,7 +23,10 @@ const auth = (err) => {
     ReactDOM.render(
         <ThemeProvider theme={theme}>
             <Div>
-                { err === undefined || <ErrorMsg msg={err} /> }
+                <SmallTitle>
+                    Your Music Feeds <span style={{ fontSize: "50%" }}>BETA</span>
+                </SmallTitle>
+                { err === undefined || <MsgArea msg={err} /> }
                 <BigButton
                     label="Login with Spotify"
                     icon="fab fa-spotify"
@@ -61,7 +66,7 @@ const BigButton = (props) => { // props: { label:, icon:, func: }
 
     const StyledButton = styled(Button)(({ theme }) => ({
         color: pal.spotify.white,
-        backgroundColor: pal.spotify.green,
+        backgroundColor: pal.darkgreen,
         padding: 20,
         transition: "0.4s",
         "&:hover": {
@@ -94,13 +99,15 @@ const BigButton = (props) => { // props: { label:, icon:, func: }
 }
 
 
-const ErrorMsg = (props) => {
+const MsgArea = (props) => {
 
     const Msg = styled(Typography)(({ theme }) => ({
         color: pal.yellow,
-        padding: "20px",
+        padding: "32px",
+        margin: "0 1.5em",
+        maxWidth: "30em",
         borderRadius: radius,
-        backgroundColor: pal.bglight,
+        backgroundColor: pal.bgdark,
         fontSize: "19px",
         whiteSpace: "pre-wrap",
         textAlign: "center",
@@ -138,3 +145,13 @@ const BGParticles = () => {
         <Canvas className="particles" />
     );
 }
+
+
+
+
+const SmallTitle = styled(BigTitle)({
+    padding: "16px 32px",
+    margin: "0.5em",
+    borderRadius: radius,
+    backgroundColor: pal.bgdark,
+});

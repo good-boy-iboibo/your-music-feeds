@@ -2,11 +2,14 @@
 //include
 Object.assign(window, MaterialUI);
 
+
 //short variables
+const green_hue = 158;
 const pal = {
     yellow: "hsl(52, 100%, 50%)",
     green: "#30d865", // spotify light green'
-    darkgreen: "hsl(141, 100%, 33%)",
+    //darkgreen: "hsl(141, 100%, 33%)",
+    darkgreen: `hsl(${green_hue}, 100%, 30%)`,
     gray: "hsla(0, 0%, 7%, 0.6)",
     lightgray: "hsl(0, 0%, 38%)",
     bgmain:  "hsl(162, 30%,  21%)",
@@ -17,11 +20,13 @@ const pal = {
     txtmain: "hsl(47,  100%, 61%)",
     txtdark: "hsla(47, 100%, 55%, 0.9)",
     spotify: {
-        green: "hsl(141, 73%, 42%)",
+        //green: "hsl(141, 73%, 42%)",
+        green: `hsl(${green_hue}, 63%, 45%)`,
         black: "#121212",
         white: "#ffffff",
     },
 };
+
 const radius = 7;
 
 
@@ -52,7 +57,7 @@ const theme = createTheme({
 
     typography: {
         fontSize: 15,
-        fontFamily: "Nunito",
+        fontFamily: '"Nunito", sans-serif',
         button: {
             textTransform: "none"
         },
