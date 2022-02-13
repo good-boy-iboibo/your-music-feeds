@@ -18,7 +18,7 @@ let isPC = true;
         isPC = false;
         document
             .getElementById("viewport")
-            .setAttribute("content", `width=${Math.max(window.innerWidth, 540)}`);
+            .setAttribute("content", `width=${Math.max(screen.Width, 540)}`);
     }
     if (window.innerWidth < 870) {
         isPC = false;
