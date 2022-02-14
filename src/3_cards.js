@@ -198,7 +198,7 @@ const CardItem = ({ item }) => {
             <Modal
                 open={embedOpen}
                 onClose={() => setEmbedOpen(false)}
-                style={{ border:"none" }}
+                style={{ border:"none", outline:"none" }}
                 >
                 <ModalBox onClick={() => setEmbedOpen(false)}>
                     <Spinner />
