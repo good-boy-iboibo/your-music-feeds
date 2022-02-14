@@ -22,7 +22,7 @@ const auth = (err) => {
         <ThemeProvider theme={theme}>
             <Div>
                 <SmallTitle>
-                    Your Music Feeds[/* <span style={{ fontSize: "50%" }}>BETA</span>*/}
+                    Your Music Feeds{/* <span style={{ fontSize: "50%" }}>BETA</span>*/}
                 </SmallTitle>
                 <MsgArea err={err} />
                 <BigButton

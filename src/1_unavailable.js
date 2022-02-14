@@ -16,7 +16,7 @@ const unavailable = () => {
         <ThemeProvider theme={theme}>
             <Div>
                 <SmallTitle>
-                    Your Music Feeds <span style={{ fontSize: "50%" }}>BETA</span>
+                    Your Music Feeds{/* <span style={{ fontSize: "50%" }}>BETA</span>*/}
                 </SmallTitle>
                 <MsgArea err=
                     {"Your browser isn't supported\n(can't use localStorage)"}

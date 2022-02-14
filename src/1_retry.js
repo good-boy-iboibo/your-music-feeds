@@ -15,7 +15,7 @@ const retry = (arg) => {
         <ThemeProvider theme={theme}>
             <Div>
                 <SmallTitle>
-                    Your Music Feeds <span style={{ fontSize: "50%" }}>BETA</span>
+                    Your Music Feeds{/* <span style={{ fontSize: "50%" }}>BETA</span>*/}
                 </SmallTitle>
                 <MsgArea err=
                     {"Too Many Requests (429)\nPlease wait for a while and retry."}
