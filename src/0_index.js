@@ -1,6 +1,6 @@
 
 const redirect = "https://good-boy-iboibo.github.io/your-music-feeds/";
-//const redirect = "http://127.0.0.1:5500/"
+// const redirect = "http://127.0.0.1:5500/"
 const client_id = "12803c2e0ae54cef8b217bfa8e7f9604";
 const client_secret = "0e86c3318f9a498c8d849b5da344986f";
 const scope = "user-follow-read user-read-private";
