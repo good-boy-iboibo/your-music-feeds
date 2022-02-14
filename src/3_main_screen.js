@@ -90,7 +90,7 @@ const AppTitle = () => {
     return (
         <Div>
             <BigTitle>
-                Your Music Feeds //<span style={{ fontSize: "50%" }}>BETA</span>
+                Your Music Feeds{/* <span style={{ fontSize: "50%" }}>BETA</span>*/}
             </BigTitle>
             <div style={{ display: "inline-block" }}>
                 <Tooltip title="Share this app on Twitter" placement="bottom">
