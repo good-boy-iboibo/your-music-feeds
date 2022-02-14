@@ -159,13 +159,13 @@ const MadeBy = () => {
     }));
     return (
         <a
-        href="https://twitter.com/good_boy_iboibo"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-            textDecoration: "none",
-            margin: (isPC? "2em 0 3.85em 0": "0 0 4em 0"),
-        }}
+            href="https://twitter.com/good_boy_iboibo"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+                textDecoration: "none",
+                margin: (isPC? "2em 0 3.85em 0": "0 0 4em 0"),
+            }}
         >
             <Typo>
                 Made by @<u>good_boy_iboibo</u>
