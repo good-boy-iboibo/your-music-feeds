@@ -205,19 +205,25 @@ const CardItem = ({ item }) => {
                 >
                 <ModalBox onClick={() => setEmbedOpen(false)}>
                     <Spinner />
-                    <iframe
-                        src={`https://open.spotify.com/embed/album/${item.id}`}
-                        width="50%"
-                        height="380"
-                        frameBorder="0"
-                        style={{ 
-                            borderRadius: radius,
-                            position: "relative",
-                            zIndex: 2,
-                        }}
-                        allow="encrypted-media"
-                    >
-                    </iframe>
+                    <div style={{
+                        width: "100%",
+                        padding: "0 3.4em",
+                        maxWidth: "530px",
+                    }}>
+                        <iframe
+                            src={`https://open.spotify.com/embed/album/${item.id}`}
+                            width="100%"
+                            height="360"
+                            frameBorder="0"
+                            style={{
+                                borderRadius: radius,
+                                position: "relative",
+                                zIndex: 2,
+                            }}
+                            allow="encrypted-media"
+                            >
+                        </iframe>
+                    </div>
                 </ModalBox>
             </Modal>
         </React.Fragment>
