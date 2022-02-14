@@ -181,6 +181,9 @@ const CardItem = ({ item }) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        "&:focus": {
+            outline:"none",
+        },
     });
 
     return (
@@ -198,7 +201,7 @@ const CardItem = ({ item }) => {
             <Modal
                 open={embedOpen}
                 onClose={() => setEmbedOpen(false)}
-                style={{ border:"none", outline:"none" }}
+                style={{ border:"none" }}
                 >
                 <ModalBox onClick={() => setEmbedOpen(false)}>
                     <Spinner />
