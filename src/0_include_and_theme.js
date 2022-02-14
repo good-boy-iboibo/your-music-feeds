@@ -19,6 +19,7 @@ const pal = {
     bgyellow:"hsl(52,  91%,  50%)",
     txtmain: "hsl(47,  100%, 61%)",
     txtdark: "hsla(47, 100%, 55%, 0.9)",
+    bggray: "hsl(0, 0%, 45%)",
     spotify: {
         //green: "hsl(141, 73%, 42%)",
         green: `hsl(${green_hue}, 63%, 45%)`,
@@ -71,6 +72,16 @@ const theme = createTheme({
                 arrow: true,
                 placement: "top",
             },
+            styleOverrides: {
+                tooltip: {
+                    fontSize: 15,
+                    background: pal.bggray,
+                    padding: "0.8em",
+                },
+                arrow: {
+                    color: pal.bggray,
+                },
+            }
         },
     },
 });
