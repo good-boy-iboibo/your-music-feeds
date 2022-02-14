@@ -207,7 +207,11 @@ const CardItem = ({ item }) => {
                         width="50%"
                         height="380"
                         frameBorder="0"
-                        style={{ borderRadius: radius, zIndex: 2 }}
+                        style={{ 
+                            borderRadius: radius,
+                            position: "relative",
+                            zIndex: 2,
+                        }}
                         allow="encrypted-media"
                     >
                     </iframe>
