@@ -24,8 +24,11 @@ const launch = () => {
     const Loading = () => {
         const Div = styled("div")({
             position: "fixed",
-            width: "100vw",
-            height: "102vh",
+            width: "200vw",
+            height: "200vh",
+            top: "50%",
+            left: "50%",
+            transform: "translateY(-50%) translateX(-50%)",
             zIndex: 9999,
 
             background: pal.bgloading,
