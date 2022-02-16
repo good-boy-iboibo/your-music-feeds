@@ -28,7 +28,7 @@ const launch = () => {
             height: "100vh",
             zIndex: 9999,
 
-            background: "hsla(0,0%,0%,0.6)",
+            background: pal.bgloading,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",

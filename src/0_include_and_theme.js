@@ -20,6 +20,7 @@ const pal = {
     txtmain: "hsl(47,  100%, 61%)",
     txtdark: "hsla(47, 100%, 55%, 0.9)",
     bggray: "hsl(0, 0%, 45%)",
+    bgloading: "hsla(0,0%,0%, 0.55)",
     spotify: {
         //green: "hsl(141, 73%, 42%)",
         green: `hsl(${green_hue}, 63%, 45%)`,
