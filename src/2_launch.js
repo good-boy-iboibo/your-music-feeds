@@ -25,7 +25,7 @@ const launch = () => {
         const Div = styled("div")({
             position: "fixed",
             width: "100vw",
-            height: "100vh",
+            height: "102vh",
             zIndex: 9999,
 
             background: pal.bgloading,
