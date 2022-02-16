@@ -2,8 +2,8 @@
 const MainScreen = () => {
 
     const BG = styled("div")({
+        width: "100%",
         minHeight: "100vh",
-        width: "100vw",
         backgroundColor: pal.bgmain,
     });
 
