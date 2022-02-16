@@ -62,8 +62,6 @@ const MainArea = () => {
 
 const AppTitle = () => {
 
-    const isGetDataDone = React.useContext(IsGetDataDone)
-
     const tweetURL = "https://good-boy-iboibo.github.io/your-music-feeds/"
     const tweetText = "Your Music Feeds"
 
@@ -93,15 +91,13 @@ const AppTitle = () => {
                 Your Music Feeds{/* <span style={{ fontSize: "50%" }}>BETA</span>*/}
             </BigTitle>
 
-            {isGetDataDone || <SmallSpinner />}
-
             <div style={{ marginLeft: "auto" }}>
                 <Tooltip title="Share this app on Twitter" placement="bottom">
                     <a
                         href={`https://twitter.com/share?url=${tweetURL}&text=${tweetText}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        >
+                    >
                         <Twitter className="fab fa-twitter-square" />
                     </a>
                 </Tooltip>
@@ -121,28 +117,3 @@ const BigTitle = styled(Typography)(({ theme }) => ({
     userSelect: "none",
     textShadow: "hsla(0, 0%, 0%, 0.6) 0.10em 0.07em 0.02em",
 }));
-
-
-const SmallSpinner = () => {
-    return (
-        <div className="sk-circle" style={{
-            width: "2.4em",
-            height: "2.4em",
-            marginLeft: "0.8em",
-            position: "static",
-        }}>
-            <div className="sk-circle1 sk-child"></div>
-            <div className="sk-circle2 sk-child"></div>
-            <div className="sk-circle3 sk-child"></div>
-            <div className="sk-circle4 sk-child"></div>
-            <div className="sk-circle5 sk-child"></div>
-            <div className="sk-circle6 sk-child"></div>
-            <div className="sk-circle7 sk-child"></div>
-            <div className="sk-circle8 sk-child"></div>
-            <div className="sk-circle9 sk-child"></div>
-            <div className="sk-circle10 sk-child"></div>
-            <div className="sk-circle11 sk-child"></div>
-            <div className="sk-circle12 sk-child"></div>
-        </div>
-    );
-};

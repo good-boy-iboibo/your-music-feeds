@@ -19,18 +19,28 @@ const Spinner = () => {
 };
 
 
-
-
-const IsGetDataDone = React.createContext(false);
-
 const launch = () => {
+
+    const Loading = () => {
+        const Div = styled("div")({
+            position: "fixed",
+            width: "100vw",
+            height: "100vh",
+            zIndex: 9999,
+
+            background: "hsla(0,0%,0%,0.6)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+        });
+        return <Div><Spinner/></Div>;
+    };
 
     const interval_id = setInterval(() => {
         ReactDOM.render(
             <ThemeProvider theme={theme}>
-                <IsGetDataDone.Provider value={false}>
-                    <MainScreen />
-                </IsGetDataDone.Provider>
+                <Loading />
+                <MainScreen />
             </ThemeProvider>,
             document.getElementById("root"));
     }, 1200);
@@ -40,9 +50,7 @@ const launch = () => {
             clearInterval(interval_id);
             ReactDOM.render(
                 <ThemeProvider theme={theme}>
-                    <IsGetDataDone.Provider value={true}>
-                        <MainScreen />
-                    </IsGetDataDone.Provider>
+                    <MainScreen />
                 </ThemeProvider>,
                 document.getElementById("root"))
         });
