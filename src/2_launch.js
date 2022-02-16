@@ -39,14 +39,18 @@ const launch = () => {
         return <Div><Spinner/></Div>;
     };
 
-    const interval_id = setInterval(() => {
+    const render = () => {
         ReactDOM.render(
             <ThemeProvider theme={theme}>
                 <Loading />
                 <MainScreen />
             </ThemeProvider>,
-            document.getElementById("root"));
-    }, 2400);
+            document.getElementById("root")
+        );
+    };
+
+    render();
+    const interval_id = setInterval(() => render(), 1200);
 
     get_data()
         .then(() => {
@@ -55,6 +59,7 @@ const launch = () => {
                 <ThemeProvider theme={theme}>
                     <MainScreen />
                 </ThemeProvider>,
-                document.getElementById("root"))
+                document.getElementById("root")
+            )
         });
 };

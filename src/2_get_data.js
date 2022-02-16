@@ -78,11 +78,11 @@ const get_data = async () => {
         await Promise.all(que);
     }
 
-//     { // slower but safe
-//         for (let id of followings_map.keys()) {
-//             await get_artist_albums(id);
-//         }
-//     }
+    // { // slower but safe
+    //     for (let id of followings_map.keys()) {
+    //         await get_artist_albums(id);
+    //     }
+    // }
 
     console.log("get_data() is done");
     return;
@@ -188,8 +188,8 @@ const request_data = async (url) => { // return value is Promise<Response>
         else if (res.status != 429) return Promise.reject(res.status);
         else {
             const sleep_time = res.headers.has("Retry-After") ?
-            Number(res.headers.get("Retry-After")) * 1000 + 1000 :
-            1000;
+                Number(res.headers.get("Retry-After")) * 1000 + 1000 :
+                1000;
             await new Promise(resolve => setTimeout(resolve, sleep_time)); // sleep
         }
     }
