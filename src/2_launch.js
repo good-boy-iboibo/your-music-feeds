@@ -49,7 +49,6 @@ const launch = () => {
         );
     };
 
-    render();
     const interval_id = setInterval(() => render(), 1200);
 
     get_data()

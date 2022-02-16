@@ -74,7 +74,7 @@ const get_data = async () => {
         const que = [];
         followings_map.forEach((value, key) => {
             que.push(get_artist_albums(key));
-        })
+        });
         await Promise.all(que);
     }
 
