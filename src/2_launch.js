@@ -21,30 +21,29 @@ const Spinner = () => {
 
 
 
-const launch = async () => {
+const IsGetDataDone = React.createContext(false);
 
-    const Div = styled("div")({
-        height: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: pal.bgmain,
-    });
+const launch = () => {
 
-    ReactDOM.render(
-        <Div>
-            <Spinner />
-        </Div>,
-        document.getElementById("root")
-    );
+    const interval_id = setInterval(() => {
+        ReactDOM.render(
+            <ThemeProvider theme={theme}>
+                <IsGetDataDone.Provider value={false}>
+                    <MainScreen />
+                </IsGetDataDone.Provider>
+            </ThemeProvider>,
+            document.getElementById("root"));
+    }, 1200);
 
     get_data()
-        .then(() =>
+        .then(() => {
+            clearInterval(interval_id);
             ReactDOM.render(
                 <ThemeProvider theme={theme}>
-                    <MainScreen/>
+                    <IsGetDataDone.Provider value={true}>
+                        <MainScreen />
+                    </IsGetDataDone.Provider>
                 </ThemeProvider>,
-            document.getElementById("root")
-            )
-        );
+                document.getElementById("root"))
+        });
 };
