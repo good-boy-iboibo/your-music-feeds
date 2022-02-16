@@ -46,7 +46,7 @@ const launch = () => {
                 <MainScreen />
             </ThemeProvider>,
             document.getElementById("root"));
-    }, 1200);
+    }, 2400);
 
     get_data()
         .then(() => {
