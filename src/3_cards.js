@@ -92,10 +92,10 @@ const CardItem = ({ item }) => {
             fontWeight: "bold",
             overflowWrap: "anywhere",
         }));
-        const Title = styled(Artist)({
+        const Title = styled(Typography)(({ theme }) => ({
             fontSize: "94%",
-            fontWeight: "normal",
-        });
+            overflowWrap: "anywhere",
+        }));
         return (
             <Div>
                 <Artist className="txtmain">{artistsString()}</Artist>
