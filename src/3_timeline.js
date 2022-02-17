@@ -88,6 +88,10 @@ const PageNav = ({ state, setState }) => {
             </Tooltip>
 
             <Pagination
+                size={(window.innerWidth > 880 || (!isPC && window.innerWidth > 590) ?
+                    "medium" :
+                    "small"
+                )}
                 color="secondary"
                 count={state.totalPage}
                 page={state.curPage}
