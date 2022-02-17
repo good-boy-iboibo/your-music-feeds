@@ -5,6 +5,7 @@ html {
 
 body {
     margin: 0;
+    height: var(--vh100);
     overflow-x: hidden;
 }
 
