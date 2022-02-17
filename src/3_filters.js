@@ -24,6 +24,7 @@ const Filters = ({params, setParams, count}) => {
 
     return (
         <div style={{
+            flexShrink: 0,
             height: "auto",
             display: "flex",
             flexDirection: "column",
