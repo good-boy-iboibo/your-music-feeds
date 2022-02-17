@@ -5,7 +5,6 @@ const unavailable = () => {
     localStorage.clear();
 
     const Div = styled("div")({
-        height: "100vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -14,7 +13,7 @@ const unavailable = () => {
 
     ReactDOM.render(
         <ThemeProvider theme={theme}>
-            <Div>
+            <Div className="vh100">
                 <SmallTitle>
                     Your Music Feeds{/* <span style={{ fontSize: "50%" }}>BETA</span>*/}
                 </SmallTitle>

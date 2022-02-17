@@ -177,7 +177,6 @@ const CardItem = ({ item }) => {
 
     const ModalBox = styled("div")({
         width: "100%",
-        height: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -203,7 +202,10 @@ const CardItem = ({ item }) => {
                 onClose={() => setEmbedOpen(false)}
                 style={{ border:"none" }}
                 >
-                <ModalBox onClick={() => setEmbedOpen(false)}>
+                <ModalBox
+                    className="vh100"
+                    onClick={() => setEmbedOpen(false)}
+                >
                     <Spinner />
                     <div style={{
                         width: "100%",

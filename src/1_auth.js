@@ -11,7 +11,6 @@ const auth = (err) => {
     };
 
     const Div = styled("div")({
-        height: "100vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -20,7 +19,7 @@ const auth = (err) => {
 
     ReactDOM.render(
         <ThemeProvider theme={theme}>
-            <Div>
+            <Div className="vh100">
                 <SmallTitle>
                     Your Music Feeds{/* <span style={{ fontSize: "50%" }}>BETA</span>*/}
                 </SmallTitle>
@@ -143,7 +142,6 @@ const BGParticles = () => {
 
     const Canvas = styled("canvas")({
         width: "100%",
-        height: "100vh",
         position: "absolute",
         top: 0,
         zIndex: -1,
@@ -151,7 +149,7 @@ const BGParticles = () => {
     });
 
     return (
-        <Canvas className="particles" />
+        <Canvas className="particles vh100" />
     );
 }
 

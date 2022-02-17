@@ -4,7 +4,6 @@ const retry = (arg) => {
     console.log("retry(...) is called");
 
     const Div = styled("div")({
-        height: "100vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -13,7 +12,7 @@ const retry = (arg) => {
 
     ReactDOM.render(
         <ThemeProvider theme={theme}>
-            <Div>
+            <Div className="vh100">
                 <SmallTitle>
                     Your Music Feeds{/* <span style={{ fontSize: "50%" }}>BETA</span>*/}
                 </SmallTitle>

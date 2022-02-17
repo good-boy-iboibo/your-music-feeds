@@ -3,6 +3,17 @@
 Object.assign(window, MaterialUI);
 
 
+//100vh
+document.documentElement.style.setProperty(
+    "--vh100", `${window.innerHeight}px`
+);
+window.addEventListener("resize", () =>
+    document.documentElement.style.setProperty(
+        "--vh100", `${window.innerHeight}px`
+    )
+);
+
+
 //short variables
 const green_hue = 158;
 const pal = {

@@ -1,12 +1,6 @@
 
 const MainScreen = () => {
 
-    const BG = styled("div")({
-        width: "100%",
-        minHeight: "100vh",
-        backgroundColor: pal.bgmain,
-    });
-
     const SideLimit = styled("div")({
         maxWidth: "64em",
         margin: "0 auto",
@@ -14,12 +8,10 @@ const MainScreen = () => {
     });
 
     return (
-        <BG>
-            <SideLimit>
-                <AppTitle />
-                <MainArea />
-            </SideLimit>
-        </BG>
+        <SideLimit>
+            <AppTitle />
+            <MainArea />
+        </SideLimit>
     );
 }
 
