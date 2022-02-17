@@ -70,6 +70,7 @@ const CardItem = ({ item }) => {
     const Artwork = styled("img")({
         height: ArtworkSize,
         width: ArtworkSize,
+        flexShrink: 0,
         margin: marginsInCard,
         borderRadius: "0.15em",
         boxShadow: `rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px`,
