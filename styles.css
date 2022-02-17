@@ -13,6 +13,10 @@ body {
     height: var(--vh100);
 }
 
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 
 
 
