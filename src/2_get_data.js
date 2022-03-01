@@ -70,7 +70,7 @@ const get_data = async () => {
     console.log("get_data() is called");
     await get_followings();
 
-    { // faster
+    if (followings_map.size < 2000) { // faster
         const que = [];
         followings_map.forEach((value, key) => {
             que.push(get_artist_albums(key));
@@ -78,11 +78,11 @@ const get_data = async () => {
         await Promise.all(que);
     }
 
-    // { // slower but safe
-    //     for (let id of followings_map.keys()) {
-    //         await get_artist_albums(id);
-    //     }
-    // }
+    else { // slower but safe
+        for (let id of followings_map.keys()) {
+            await get_artist_albums(id);
+        }
+    }
 
     console.log("get_data() is done");
     return;
